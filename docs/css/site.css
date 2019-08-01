@@ -120,7 +120,7 @@ blockquote .author:before {
 .site {
   margin: 0 auto; }
   .site-main-background {
-    background: url("../../images//main-background.jpg") top center;
+    background: url("../images//main-background.jpg") top center;
     height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
