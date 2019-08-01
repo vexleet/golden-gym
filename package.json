@@ -1,7 +1,7 @@
 {
-  "name": "Mycroft",
+  "name": "golden-gym",
   "version": "1.0.0",
-  "description": "Jekyll theme by the best HTML & CSS Course",
+  "description": "Jekyll theme for the best HTML & CSS Course",
   "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:kdankov/su-jekyll-mycroft.git"
+    "url": "https://github.com/vexleet/golden-gym.git"
   },
   "author": "",
   "license": "ISC",

@@ -1,7 +1,6 @@
 .site {
-    max-width: var(--layout-main-width);
+    // max-width: var(--layout-main-width);
     margin: 0 auto;
-    padding: 2em;
 
     @include bp( laptop ) {
         display: grid;
@@ -9,8 +8,59 @@
         grid-column-gap: 4em;
         grid-template-areas:
             "header header"
-            "main sidebar"
+            "main main"
             "footer footer";
+
+        .site-header {
+            grid-area: header;
+            display: flex;
+            align-items: center;
+        }
+        
+        .site-main {
+            grid-area: main;
+        }
+
+        .site-main-background{
+            background: url('../../images//main-background.jpg') top center;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 1.5em;
+        }
+    
+        .site-main-background-text{
+            width: 400px;
+            color: #fff;
+            margin-left: 50px;
+            padding: 1em;
+            background: #222629;
+            background: rgba(34, 38, 41, 0.5);
+        }
+
+        .site-main-background-text a{
+            font-size: 25px;
+        }
+
+        .site-sidebar {
+            grid-area: sidebar;
+        }
+    
+        .site-footer {
+            grid-area: footer;
+        }
+    
+        .site-header nav {
+            margin-left: auto;
+        }
+    }
+
+    @include bp( phone ){
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
 
         .site-header {
             grid-area: header;
@@ -29,12 +79,41 @@
         }
     
         .site-header {
-            display: flex;
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            // padding: 1em;
             align-items: center;
         }
-    
-        .site-header nav {
-            margin-left: auto;
+
+        .site-nav{
+            grid-column: 1 / -1;
+        }
+
+        .site-nav ul{
+            flex-direction: column;
+        }
+
+        .site-nav ul li{
+            width: 100%;
+            padding: 0;
+        }
+
+        .site-nav ul li a{
+            border-radius: 0;
+            padding: 1.5em;
+        }
+
+        .site-nav ul li{
+            background: #0C0D11;
+            color: #66FCF1;
+        }
+
+        .site-header .site-title{
+            margin-right: auto;
+        }
+
+        .site-nav{
+            display: none;
         }
     }
 }

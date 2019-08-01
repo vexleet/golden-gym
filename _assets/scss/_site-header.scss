@@ -2,8 +2,8 @@
 
     &-header {
         border-bottom: 1px solid var(--color-border-default);
-        margin-bottom: var(--spacing-layout-elements);
-        padding-bottom: calc( var(--spacing-layout-elements) / 2 );
+        background: var(--color-header-bgrd);
+        padding: 0 5em;
     }
 
     &-title {
@@ -17,4 +17,7 @@
         }
     }
     
+    &-header-background{
+        background: url('../../images/body_bgrd.jpg');
+    }
 }

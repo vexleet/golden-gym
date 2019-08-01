@@ -7,7 +7,8 @@
   --layout-main-width: 60em;
   --color-body-text: #000;
   --color-body-bgrd: #FFF;
-  --color-link-default: #369;
+  --color-link-default: #87C232;
+  --color-header-bgrd: #222629;
   --color-border-default: #999;
   --spacing-layout-elements: 2em; }
 
@@ -117,14 +118,43 @@ blockquote .author:before {
         margin-left: 1em; }
 
 .site {
-  max-width: var(--layout-main-width);
-  margin: 0 auto;
-  padding: 2em; }
+  margin: 0 auto; }
   @media (min-width: 1024px) {
     .site {
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-column-gap: 4em;
+      grid-template-areas: "header header" "main main" "footer footer"; }
+      .site .site-header {
+        grid-area: header;
+        display: flex;
+        align-items: center; }
+      .site .site-main {
+        grid-area: main; }
+      .site .site-main-background {
+        background: url("../../images//main-background.jpg") top center;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 1.5em; }
+      .site .site-main-background-text {
+        width: 400px;
+        color: #fff;
+        margin-left: 50px;
+        padding: 1em;
+        background: #222629;
+        background: rgba(34, 38, 41, 0.5); }
+      .site .site-main-background-text a {
+        font-size: 25px; }
+      .site .site-sidebar {
+        grid-area: sidebar; }
+      .site .site-footer {
+        grid-area: footer; }
+      .site .site-header nav {
+        margin-left: auto; } }
+  @media (max-width: 650px) {
+    .site {
+      display: grid;
       grid-template-areas: "header header" "main sidebar" "footer footer"; }
       .site .site-header {
         grid-area: header; }
@@ -135,10 +165,26 @@ blockquote .author:before {
       .site .site-footer {
         grid-area: footer; }
       .site .site-header {
-        display: flex;
+        display: grid;
+        grid-template-columns: 5fr 1fr;
         align-items: center; }
-      .site .site-header nav {
-        margin-left: auto; } }
+      .site .site-nav {
+        grid-column: 1 / -1; }
+      .site .site-nav ul {
+        flex-direction: column; }
+      .site .site-nav ul li {
+        width: 100%;
+        padding: 0; }
+      .site .site-nav ul li a {
+        border-radius: 0;
+        padding: 1.5em; }
+      .site .site-nav ul li {
+        background: #0C0D11;
+        color: #66FCF1; }
+      .site .site-header .site-title {
+        margin-right: auto; }
+      .site .site-nav {
+        display: none; } }
 
 .page-blog .site {
   grid-template-areas: "header header" "main main" "footer footer"; }
@@ -183,8 +229,8 @@ blockquote .author:before {
 
 .site-header {
   border-bottom: 1px solid var(--color-border-default);
-  margin-bottom: var(--spacing-layout-elements);
-  padding-bottom: calc( var(--spacing-layout-elements) / 2); }
+  background: var(--color-header-bgrd);
+  padding: 0 5em; }
 
 .site-title {
   margin: 0;
@@ -194,10 +240,33 @@ blockquote .author:before {
     display: block;
     padding: 0.5em 0; }
 
+.site-header-background {
+  background: url("../../images/body_bgrd.jpg"); }
+
 .site-footer {
   border-top: 1px solid var(--color-border-default);
   margin-top: var(--spacing-layout-elements);
   padding-top: calc( var(--spacing-layout-elements) / 2); }
+
+.hamburger-nav {
+  display: none;
+  cursor: pointer; }
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #66FCF1;
+  margin: 6px 0;
+  transition: 0.4s; }
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px); }
+
+.change .bar2 {
+  opacity: 0; }
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px); }
 
 .site-nav > ul {
   display: flex;
@@ -214,21 +283,19 @@ blockquote .author:before {
 .site-nav a {
   display: block;
   padding: 0.5em 1em;
-  border-radius: 0.3em;
-  background: #EEE; }
+  border-radius: 0.3em; }
 
 .site-nav li.selected > a,
 .site-nav a:hover {
-  background: var(--color-link-default);
-  color: var(--color-body-bgrd); }
+  color: #EDF5E0; }
 
 .site-nav a i.fas:before {
-  color: #000;
+  color: var(--color-link-default);
   margin-right: 0.5em; }
 
 .site-nav li.selected > a i.fas:before,
 .site-nav a:hover i.fas:before {
-  color: #FFF; }
+  color: #EDF5E0; }
 
 .page-animations .site-main h1,
 .page-animations .site-header,
