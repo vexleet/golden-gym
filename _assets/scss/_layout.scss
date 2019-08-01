@@ -2,6 +2,171 @@
     // max-width: var(--layout-main-width);
     margin: 0 auto;
 
+    &-main-background{
+        background: url('../../images//main-background.jpg') top center;
+        height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 5em;
+    }
+
+    &-main-background-text{
+        width: 400px;
+        color: #fff;
+        margin-left: 50px;
+        padding: 1em;
+        background: #222629;
+        background: rgba(34, 38, 41, 0.5);
+    }
+
+    .main-offer{
+        text-align: center;
+        color: #222629;
+        width: 80%;
+        margin: var(--spacing-layout-elements) auto 0 auto;
+    }
+
+    .main-offer ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main-offer ul li{
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .main-offer ul li .offers-image{
+        background: #474A4F;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin: 0 auto 10px auto;
+    }
+    
+    .main-offer ul li .offers-image img{
+        margin: 20px auto auto auto;
+    }
+
+    .main-offer ul li .offers-text{
+        width: 250px;
+    }
+
+    .main-packages .packages{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main-packages .packages > li{
+        list-style-type: none;
+        border: 1px solid #6A6E71;
+        border-bottom: 3px solid #6A6E71;
+    }
+
+    .main-packages .packages > li:hover{
+        border-color: #87C232;
+    }
+
+    .main-packages .packages > li div{
+        width: 400px;
+    }
+
+    .main-packages .packages > li div img{
+        width: 100%;
+    }
+
+    .main-packages .packages > li div .packages-text{
+        padding: 1em;
+        color: #6A6E71;
+    }
+
+    .main-packages h1{
+        text-align: center;
+    }
+
+    .main-packages .packages-text h3{
+        font-size: 23px;
+    }
+
+    .main-packages .packages-text p{
+        padding-bottom: 5px;
+        font-style: italic;
+    }
+
+    .main-packages .packages-text .price{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .main-packages .packages-text .price span{
+        font-size: 0.8em;
+        font-weight: 100;
+    }
+
+    .main-packages .packages-text h3{
+        margin-bottom: 0;
+    }
+
+    .main-packages .packages-text a{
+        background: var(--color-header-bgrd);
+        padding: 15px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    .main-packages .packages-text a:hover{
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .main-training{
+        background: #222629;
+        color: #87C232;
+        height: 300px;
+        padding: 3em 10em;
+    }
+
+    .main-training span{
+        display: block;
+    }
+
+    .main-training a{
+        border: 2px solid #fff;
+        padding: 0.8em 1em;
+        transition: background 0.3s ease-in;
+    }
+
+    .main-training a:hover{
+        background: #fff;
+    }
+    
+    .newsletter{
+        text-align: center;
+        margin: var( --spacing-layout-elements);
+    }
+
+    .newsletter form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .newsletter form input{
+        padding: 5px;
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    .newsletter form button{
+        height: 40px;
+        padding: 0 20px;
+        background: #618930;
+        font-size: 1em;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
     @include bp( laptop ) {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -19,23 +184,6 @@
         
         .site-main {
             grid-area: main;
-        }
-
-        .site-main-background{
-            background: url('../../images//main-background.jpg') top center;
-            height: 500px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-top: 1.5em;
-        }
-    
-        .site-main-background-text{
-            width: 400px;
-            color: #fff;
-            margin-left: 50px;
-            padding: 1em;
-            background: #222629;
-            background: rgba(34, 38, 41, 0.5);
         }
 
         .site-main-background-text a{
