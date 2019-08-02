@@ -1,6 +1,6 @@
 let slideIndex = 1;
 
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/' || window.location.pathname === '/golden-gym/') {
     const prevButton = document.getElementsByClassName('prev')[0];
     const nextButton = document.getElementsByClassName('next')[0];
 
