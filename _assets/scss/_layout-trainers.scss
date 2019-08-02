@@ -1,0 +1,68 @@
+.trainers{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.trainers > h1{
+    text-align: center;
+    margin-top: calc(var(--spacing-layout-elements) / 2);
+}
+
+.trainers h1 span{
+    font-weight: 900;
+    color: #618930;
+}
+
+.trainers ul li{
+    list-style-type: none;
+    display: flex;
+}
+
+.trainers ul li img{
+    width: 50%;
+}
+
+.trainers ul li img:nth-child(odd){
+    margin-right: var(--spacing-layout-elements);
+}
+
+.trainers ul li:nth-child(2){
+    margin: var(--spacing-layout-elements) 0;
+}
+
+
+.trainers ul li img:nth-child(even){
+    margin-left: var(--spacing-layout-elements);
+}
+
+.trainers ul li .quote{
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.trainers > div{
+    background: #474A4F;
+    color: #87C232;
+    padding: 2em;
+    text-align: center;
+}
+
+.trainers > div h1{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.trainers > div a{
+    border: 3px solid #87C232;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    transition: background 0.3s ease-in, color 0.3s ease-in;
+}
+
+.trainers > div a:hover{
+    background: #87C232;
+    color: #474A4F;
+}

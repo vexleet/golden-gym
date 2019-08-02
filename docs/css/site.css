@@ -121,7 +121,7 @@ blockquote .author:before {
   margin: 0 auto; }
   .site-main-background {
     background: url("../images//main-background.jpg") top center;
-    height: 700px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 5em; }
@@ -278,46 +278,60 @@ blockquote .author:before {
       .site .site-nav {
         display: none; } }
 
-.page-blog .site {
-  grid-template-areas: "header header" "main main" "footer footer"; }
+.trainers {
+  width: 90%;
+  margin: 0 auto; }
 
-.mag {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 2em; }
+.trainers > h1 {
+  text-align: center;
+  margin-top: calc(var(--spacing-layout-elements) / 2); }
 
-.mag .content {
-  display: contents; }
+.trainers h1 span {
+  font-weight: 900;
+  color: #618930; }
 
-.mag .article {
-  grid-column: span 2;
-  padding-bottom: 2em; }
+.trainers ul li {
+  list-style-type: none;
+  display: flex; }
 
-.mag .article.featured {
-  grid-column: span 4; }
+.trainers ul li img {
+  width: 50%; }
 
-.mag .article.huge {
-  grid-column: span 6; }
+.trainers ul li img:nth-child(odd) {
+  margin-right: var(--spacing-layout-elements); }
 
-.mag .article .media {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.3em;
-  box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.4);
+.trainers ul li:nth-child(2) {
+  margin: var(--spacing-layout-elements) 0; }
+
+.trainers ul li img:nth-child(even) {
+  margin-left: var(--spacing-layout-elements); }
+
+.trainers ul li .quote {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px 0; }
+
+.trainers > div {
+  background: #474A4F;
+  color: #87C232;
+  padding: 2em;
+  text-align: center; }
+
+.trainers > div h1 {
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 1em; }
 
-.mag .article .media:before {
-  display: block;
-  content: '';
-  padding-top: 56.25%; }
+.trainers > div a {
+  border: 3px solid #87C232;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  transition: background 0.3s ease-in, color 0.3s ease-in; }
 
-.mag .article .media img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto; }
+.trainers > div a:hover {
+  background: #87C232;
+  color: #474A4F; }
 
 .site-header {
   background: var(--color-header-bgrd);
