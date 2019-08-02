@@ -41,7 +41,50 @@
         {% include sidebar.html %}
 
         <footer class="site-footer">
-            <p>All rights reserved &copy; {{ site.title }}</p>
+            <div class="fotter-wrapper">
+
+                <div class="about">
+                    <h3>About Golden Gym</h3>
+
+                    <p>Golden Gym is a Lifestyle Training and Nutrition Coaching Company.
+                        Our goal is to inspire people to start training and change their lifestyle to a better one.
+                        We offer help from professional coaches who will put you on the right track and make your life a
+                        better one.</p>
+                    <p>All rights reserved &copy; {{ site.title }}</p>
+                </div>
+
+                <div class="navigation">
+                    <h3>Site Links</h3>
+                    <nav class="site-nav location-{{ include.location }}">
+                        <ul>
+                            {% assign nav = site.pages | sort:"order" %}
+                            {% for item in nav %}
+                            {% if item.title and item.nomainnav != 1 %}
+                            <li{% if item.url == page.url %} class="selected" {% endif %}>
+                                <a href="{{ site.baseurl }}{{ item.url }}">
+                                    {% if item.icon %}<i class="fas {{ item.icon }}"></i>{% endif %}
+                                    {{ item.title }}
+                                </a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="social-media">
+                    <h3>Stay in touch</h3>
+
+                    <ul>
+                        <li><a href="www.facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                        <li><a href="www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="www.twitter.com"><i class="fab fa-twitter"></i>Twitter</a></li>
+                        <li><a href="{{site.baseurl}}/contacts"><i class="fas fa-envelope-open"></i>Contact us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
         </footer>
 
     </div>

@@ -1,21 +1,22 @@
 let slideIndex = 1;
-const prevButton = document.getElementsByClassName('prev')[0];
-const nextButton = document.getElementsByClassName('next')[0];
+
+if (window.location.pathname === '/') {
+    const prevButton = document.getElementsByClassName('prev')[0];
+    const nextButton = document.getElementsByClassName('next')[0];
+
+    prevButton.addEventListener('click', function () {
+        plusSlides(-1);
+    }, false);
+    nextButton.addEventListener('click', function () {
+        plusSlides(1);
+    }, false);
+
+    showSlides(slideIndex);
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementsByTagName('body')[0].classList.add('loaded');
-
-    showSlides(slideIndex);
 });
-
-console.log(prevButton);
-
-prevButton.addEventListener('click', function () {
-    plusSlides(-1);
-}, false);
-nextButton.addEventListener('click', function () {
-    plusSlides(1);
-}, false);
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
