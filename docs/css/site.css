@@ -120,11 +120,17 @@ blockquote .author:before {
 .site {
   margin: 0 auto; }
   .site-main-background {
-    background: url("../images//main-background.jpg") top center;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 5em; }
+    padding-top: 5em;
+    display: none; }
+  .site-main-background:nth-child(1) {
+    background: url("../images//main-background.jpg") top center; }
+  .site-main-background:nth-child(2) {
+    background: url("../images//main-background-2.jpeg") center center; }
+  .site-main-background:nth-child(3) {
+    background: url("../images//main-background-3.jpg") center; }
   .site-main-background-text {
     width: 400px;
     color: #fff;
@@ -132,6 +138,44 @@ blockquote .author:before {
     padding: 1em;
     background: #222629;
     background: rgba(34, 38, 41, 0.5); }
+  .site .prev, .site .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  .site .next {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  .site .prev:hover, .site .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .site .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
   .site .main-offer {
     text-align: center;
     color: #222629;

@@ -1,3 +1,44 @@
+let slideIndex = 1;
+const prevButton = document.getElementsByClassName('prev')[0];
+const nextButton = document.getElementsByClassName('next')[0];
+
 window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementsByTagName('body')[0].classList.add('loaded');
+
+    showSlides(slideIndex);
 });
+
+console.log(prevButton);
+
+prevButton.addEventListener('click', function () {
+    plusSlides(-1);
+}, false);
+nextButton.addEventListener('click', function () {
+    plusSlides(1);
+}, false);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("site-main-background");
+
+    if (n > slides.length) { slideIndex = 1 }
+
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
+
+
+

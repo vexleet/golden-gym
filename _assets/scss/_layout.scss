@@ -3,11 +3,23 @@
     margin: 0 auto;
 
     &-main-background{
-        background: url('../images//main-background.jpg') top center;
         height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 5em;
+        display: none;
+    }
+
+    &-main-background:nth-child(1){
+        background: url('../images//main-background.jpg') top center;
+    }
+
+    &-main-background:nth-child(2){
+        background: url('../images//main-background-2.jpeg') center center;
+    }
+
+    &-main-background:nth-child(3){
+        background: url('../images//main-background-3.jpg') center;
     }
 
     &-main-background-text{
@@ -18,6 +30,47 @@
         background: #222629;
         background: rgba(34, 38, 41, 0.5);
     }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
 
     .main-offer{
         text-align: center;
