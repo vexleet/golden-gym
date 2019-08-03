@@ -322,61 +322,6 @@ blockquote .author:before {
       .site .site-nav {
         display: none; } }
 
-.trainers {
-  width: 90%;
-  margin: 0 auto; }
-
-.trainers > h1 {
-  text-align: center;
-  margin-top: calc(var(--spacing-layout-elements) / 2); }
-
-.trainers h1 span {
-  font-weight: 900;
-  color: #618930; }
-
-.trainers ul li {
-  list-style-type: none;
-  display: flex; }
-
-.trainers ul li img {
-  width: 50%; }
-
-.trainers ul li img:nth-child(odd) {
-  margin-right: var(--spacing-layout-elements); }
-
-.trainers ul li:nth-child(2) {
-  margin: var(--spacing-layout-elements) 0; }
-
-.trainers ul li img:nth-child(even) {
-  margin-left: var(--spacing-layout-elements); }
-
-.trainers ul li .quote {
-  display: block;
-  font-weight: bold;
-  font-style: italic;
-  margin: 10px 0; }
-
-.trainers > div {
-  background: #474A4F;
-  color: #87C232;
-  padding: 2em;
-  text-align: center; }
-
-.trainers > div h1 {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 1em; }
-
-.trainers > div a {
-  border: 3px solid #87C232;
-  padding: 0.5em 1em;
-  font-size: 1.2em;
-  transition: background 0.3s ease-in, color 0.3s ease-in; }
-
-.trainers > div a:hover {
-  background: #87C232;
-  color: #474A4F; }
-
 .site-header {
   background: var(--color-header-bgrd);
   padding: 0 5em; }
@@ -617,6 +562,61 @@ blockquote .author:before {
   width: 100%;
   height: auto; }
 
+.trainers {
+  width: 90%;
+  margin: 0 auto; }
+
+.trainers > h1 {
+  text-align: center;
+  margin-top: calc(var(--spacing-layout-elements) / 2); }
+
+.trainers h1 span {
+  font-weight: 900;
+  color: #618930; }
+
+.trainers ul li {
+  list-style-type: none;
+  display: flex; }
+
+.trainers ul li img {
+  width: 50%; }
+
+.trainers ul li img:nth-child(odd) {
+  margin-right: var(--spacing-layout-elements); }
+
+.trainers ul li:nth-child(2) {
+  margin: var(--spacing-layout-elements) 0; }
+
+.trainers ul li img:nth-child(even) {
+  margin-left: var(--spacing-layout-elements); }
+
+.trainers ul li .quote {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px 0; }
+
+.trainers > div {
+  background: #474A4F;
+  color: #87C232;
+  padding: 2em;
+  text-align: center; }
+
+.trainers > div h1 {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1em; }
+
+.trainers > div a {
+  border: 3px solid #87C232;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  transition: background 0.3s ease-in, color 0.3s ease-in; }
+
+.trainers > div a:hover {
+  background: #87C232;
+  color: #474A4F; }
+
 .page-gallery {
   background: url("../images/body_bgrd.jpg"); }
 
@@ -699,3 +699,69 @@ blockquote .author:before {
   left: 1em;
   z-index: 3;
   color: #FFF; }
+
+.site-contacts {
+  width: 80%;
+  margin: 0 auto;
+  padding: var(--spacing-layout-elements) 0;
+  display: flex;
+  justify-content: space-around; }
+
+form {
+  display: grid;
+  grid-template-columns: 200px 230px;
+  grid-gap: 2em; }
+
+form input,
+form textarea {
+  display: block;
+  padding: 0.2em 0.5em; }
+
+form div:nth-child(3),
+form div:nth-child(4) {
+  grid-column: 1 / -1; }
+
+form div:nth-child(3) label {
+  display: block; }
+
+form div:nth-child(3) input,
+form div:nth-child(4) textarea {
+  width: 100%; }
+
+form button {
+  width: 150px;
+  padding: 1em;
+  background: #87C232;
+  border: none;
+  outline: none;
+  color: #222629;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
+
+form button:hover {
+  background: #618930;
+  color: #fff; }
+
+.gym-info div:nth-child(1) {
+  margin-bottom: 2em; }
+
+.gym-info ul {
+  padding: 0; }
+
+.gym-info ul li {
+  list-style-type: none;
+  padding: 0.3em 0; }
+
+.gym-info ul li i {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 4px;
+  font-size: 0.8em;
+  line-height: 1.3;
+  margin-right: 10px; }
