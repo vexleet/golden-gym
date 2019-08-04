@@ -1,0 +1,26 @@
+.testemonials{
+    h1{
+        text-align: center;
+        margin: calc(var(--spacing-layout-elements) / 2) 0;
+    }
+
+    .testemonial{
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: var(--spacing-layout-elements);
+    }
+
+    .testemonial:after{
+        content: "."; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
+    }
+
+    .testemonial img{
+        float: left;
+        width: 300px;
+        margin-right: var(--spacing-layout-elements);
+    }
+}

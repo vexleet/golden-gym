@@ -1,5 +1,5 @@
 .site-contacts{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: var(--spacing-layout-elements) 0;
     display: flex;
@@ -8,8 +8,8 @@
 
 form{
     display: grid;
-    grid-template-columns: 200px 230px;
-    grid-gap: 2em;
+    grid-template-columns: 200px auto;
+    grid-gap: 3.5em;
 }
 
 form input,
@@ -67,8 +67,8 @@ form button:hover{
     border-width: 1px;
     border-style: solid;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     padding: 4px;
     font-size: 0.8em;
