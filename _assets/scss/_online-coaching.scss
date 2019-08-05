@@ -1,0 +1,56 @@
+.coaching{
+    h1,h3{
+        text-align: center;
+        margin-top: calc(var(--spacing-layout-elements) / 2);
+    }
+
+    h3{
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    > ul{ 
+        margin-top: var(--spacing-layout-elements);
+
+        > li:not(:last-child){
+            margin-bottom: 2.5em;
+        }
+
+        > li{
+            list-style-type: none;
+            display: flex;
+
+            img{
+                margin-right: var(--spacing-layout-elements);
+                height: 180px;
+            }
+
+            li, p{
+                width: 80%;
+            }
+        }
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 0 auto;
+        margin-top: var(--spacing-layout-elements);
+
+        input, textarea, select{
+            margin-bottom: 20px;
+            padding: 0.5em;
+            max-width: 100%;
+        }
+
+        button{
+            border: 3px solid var(--color-link-default);
+            background: var(--color-link-default);
+            padding: 0.7em;
+            font-size: 1em;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
