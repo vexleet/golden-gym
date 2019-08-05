@@ -3,7 +3,7 @@
     margin: 0 auto;
 
     &-main-background{
-        height: 100vh;
+        height: 800px;
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 5em;
@@ -72,6 +72,90 @@
         from {opacity: .4} 
         to {opacity: 1}
       }
+
+    .mission{
+        display: flex;
+        align-items: center;
+
+        &-image{
+            width: 50%;
+
+            img{
+                width: 100%;
+                height: 930px;
+            }
+        }
+        
+        &-text{
+            text-align: center;
+            border: 2px solid #474A4F;
+            padding: 1em;
+            width: 50%;
+            margin: 0 var(--spacing-layout-elements); 
+
+            a{
+                border: 3px solid var( --color-link-default);
+                padding: 1em;
+                display: inline-block;
+                margin-top: 5px;
+                transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+            }
+
+            a:hover{
+                background: var(--color-link-default);
+                color: #fff;
+            }
+
+            h3::after{
+                display: block;
+                content: '';
+                border-bottom: 3px solid #222629;
+                width:  100px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .goals{
+        display: flex;
+        align-items: center;
+        
+        
+        &-image{
+            width: 50%;
+            height: 930px;
+            
+            img{
+                height: 930px;
+                width: 100%;
+            }
+        }
+        
+        .text-wrap{
+            background: #474A4F;        
+            width: 50%;
+            height: 930px;
+            padding-top: 8em;
+        }
+
+        &-text{
+            text-align: center;
+            border: 2px solid #618930;
+            padding: 2em;
+            color: #fff;
+            width: 80%;
+            margin: 0 auto;
+          
+
+            h3::after{
+                display: block;
+                content: '';
+                border-bottom: 3px solid #fff;
+                width:  100px;
+                margin: 0 auto;
+            }
+        }
+    }
 
     .main-offer{
         text-align: center;

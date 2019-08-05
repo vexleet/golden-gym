@@ -5,7 +5,7 @@
   --font-size-body-big: 18px;
   --font-size-body-huge: 20px;
   --layout-main-width: 60em;
-  --color-body-text: #000;
+  --color-body-text: #222629;
   --color-body-bgrd: #FFF;
   --color-link-default: #87C232;
   --color-header-bgrd: #222629;
@@ -120,7 +120,7 @@ blockquote .author:before {
 .site {
   margin: 0 auto; }
   .site-main-background {
-    height: 100vh;
+    height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 5em;
@@ -177,6 +177,62 @@ blockquote .author:before {
     opacity: .4; }
   to {
     opacity: 1; } }
+  .site .mission {
+    display: flex;
+    align-items: center; }
+    .site .mission-image {
+      width: 50%; }
+      .site .mission-image img {
+        width: 100%;
+        height: 930px; }
+    .site .mission-text {
+      text-align: center;
+      border: 2px solid #474A4F;
+      padding: 1em;
+      width: 50%;
+      margin: 0 var(--spacing-layout-elements); }
+      .site .mission-text a {
+        border: 3px solid var(--color-link-default);
+        padding: 1em;
+        display: inline-block;
+        margin-top: 5px;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
+      .site .mission-text a:hover {
+        background: var(--color-link-default);
+        color: #fff; }
+      .site .mission-text h3::after {
+        display: block;
+        content: '';
+        border-bottom: 3px solid #222629;
+        width: 100px;
+        margin: 0 auto; }
+  .site .goals {
+    display: flex;
+    align-items: center; }
+    .site .goals-image {
+      width: 50%;
+      height: 930px; }
+      .site .goals-image img {
+        height: 930px;
+        width: 100%; }
+    .site .goals .text-wrap {
+      background: #474A4F;
+      width: 50%;
+      height: 930px;
+      padding-top: 8em; }
+    .site .goals-text {
+      text-align: center;
+      border: 2px solid #618930;
+      padding: 2em;
+      color: #fff;
+      width: 80%;
+      margin: 0 auto; }
+      .site .goals-text h3::after {
+        display: block;
+        content: '';
+        border-bottom: 3px solid #fff;
+        width: 100px;
+        margin: 0 auto; }
   .site .main-offer {
     text-align: center;
     color: #222629;
