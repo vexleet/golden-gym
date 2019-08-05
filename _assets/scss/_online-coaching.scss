@@ -31,6 +31,32 @@
         }
     }
 
+    &-testemonials{
+        background: #222629;
+        color: #fff;
+        padding: 2em;
+        margin-bottom: var(--spacing-layout-elements);
+        
+        h2{
+            text-align: center;
+        }
+
+        ul{
+            text-align: center;
+            width: 70%;
+            margin: 0 auto;
+
+            li{
+                list-style-type: none;
+                display: none;
+
+                img{
+                    margin-bottom: calc(var(--spacing-layout-elements) / 2);
+                }
+            }
+        }
+    }
+
     form{
         display: flex;
         flex-direction: column;

@@ -814,6 +814,23 @@ blockquote .author:before {
     .coaching > ul > li li, .coaching > ul > li p {
       width: 80%; }
 
+.coaching-testemonials {
+  background: #222629;
+  color: #fff;
+  padding: 2em;
+  margin-bottom: var(--spacing-layout-elements); }
+  .coaching-testemonials h2 {
+    text-align: center; }
+  .coaching-testemonials ul {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto; }
+    .coaching-testemonials ul li {
+      list-style-type: none;
+      display: none; }
+      .coaching-testemonials ul li img {
+        margin-bottom: calc(var(--spacing-layout-elements) / 2); }
+
 .coaching form {
   display: flex;
   flex-direction: column;
