@@ -129,15 +129,35 @@ blockquote .author:before {
   .site-main-background:nth-child(1) {
     background: url("../images//main-background.jpg") top center; }
   .site-main-background:nth-child(2) {
-    background: url("../images//main-background-2.jpeg") center center; }
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images//main-background-2.jpeg") center center; }
   .site-main-background:nth-child(3) {
     background: url("../images//main-background-3.jpg") center; }
-  .site-main-background-text {
+  .site-main-background:nth-child(1) .site-main-background-text {
     width: 400px;
     color: #fff;
     margin-left: 50px;
     padding: 1em;
-    background: #222629;
+    background: rgba(34, 38, 41, 0.5); }
+  .site-main-background:nth-child(2) .site-main-background-text {
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+    font-size: 1.7em;
+    color: #fff;
+    margin-top: 2.5em; }
+    .site-main-background:nth-child(2) .site-main-background-text a {
+      border: 3px solid var(--color-link-default);
+      padding: 1em;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
+    .site-main-background:nth-child(2) .site-main-background-text a:hover {
+      background: var(--color-link-default);
+      color: #fff; }
+  .site-main-background:nth-child(3) .site-main-background-text {
+    width: 600px;
+    text-align: center;
+    color: #fff;
+    margin: 50px 0 0 50px;
+    padding: 1em;
     background: rgba(34, 38, 41, 0.5); }
   .site .prev, .site .next {
     cursor: pointer;
