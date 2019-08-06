@@ -21,6 +21,6 @@
     .testemonial img{
         float: left;
         width: 300px;
-        margin-right: var(--spacing-layout-elements);
+        margin-right: calc(var(--spacing-layout-elements) / 2);
     }
 }

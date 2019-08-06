@@ -1,9 +1,15 @@
-if (window.location.pathname === '/online-coaching/' || window.location.pathname === '/golden-gym/online-coaching/') {
+if (window.location.pathname === '/online-coaching/'
+    || window.location.pathname === '/golden-gym/online-coaching/') {
     let slideIndex = 1;
     let listItems = document.getElementsByClassName('testemonial-slideshow');
-    listItems[slideIndex - 1].style.display = "block";
+    let dots = document.getElementsByClassName('dot');
 
-    setInterval(function () {
+    listItems[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    let changeSlideInterval = setInterval(intervalFunction, 6000);
+
+    function changeSlide() {
         let i;
 
         if (slideIndex > listItems.length) { slideIndex = 1 }
@@ -12,8 +18,26 @@ if (window.location.pathname === '/online-coaching/' || window.location.pathname
             listItems[i].style.display = "none";
         }
 
-        listItems[slideIndex - 1].style.display = "block";
-        slideIndex++;
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
 
-    }, 8000);
+        listItems[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    function intervalFunction() {
+        changeSlide();
+
+        slideIndex++;
+    }
+
+    function currentSlide(n) {
+        changeSlide(slideIndex = n);
+
+        clearInterval(changeSlideInterval);
+
+        changeSlideInterval = setInterval(intervalFunction, 6000);
+    }
+
 }
