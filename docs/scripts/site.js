@@ -18,6 +18,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementsByTagName('body')[0].classList.add('loaded');
 });
 
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }

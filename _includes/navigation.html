@@ -1,4 +1,17 @@
-<div class="hamburger-nav" onclick="myFunction(this)">
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    {% assign nav = site.pages | sort:"order" %}
+    {% for item in nav %}
+    {% if item.title and item.nomainnav != 1 %}
+    <a href="{{ site.baseurl }}{{ item.url }}">
+        {{ item.title }}
+    </a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+
+<div class="hamburger-nav" onclick="openNav(this)">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
@@ -11,7 +24,6 @@
         {% if item.title and item.nomainnav != 1 %}
         <li{% if item.url == page.url %} class="selected" {% endif %}>
             <a href="{{ site.baseurl }}{{ item.url }}">
-                {% if item.icon %}<i class="fas {{ item.icon }}"></i>{% endif %}
                 {{ item.title }}
             </a>
             </li>

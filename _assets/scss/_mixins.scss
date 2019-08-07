@@ -13,19 +13,19 @@
     }
 
     @else if $point == laptop {
-        @media (min-width: 1024px) {
+        @media (max-width: 1024px) {
             @content;
         }
     }
 
-    @else if $point == mobile {
-        @media (max-width: 1023px) {
+    @else if $point == tablet {
+        @media (max-width: 768px) {
             @content;
         }
     }
 
     @else if $point == phone {
-        @media (max-width: 650px) {
+        @media (max-width: 425px) {
             @content;
         }
     }
