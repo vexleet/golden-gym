@@ -590,6 +590,40 @@
                 font-size: 1.1em;
             }
         }
+
+        .coaching {
+            h3{
+                width: 400px;
+            }
+
+            > ul > li{
+                    display: block;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    img{
+                        float: left;
+                        margin-bottom: var(--spacing-layout-elements);
+                    }
+
+                    li{
+                        width: 100%;
+                    }
+            }
+
+            form{
+                width: 70%;
+            }
+        }
+
+        .coaching-testemonials {
+            height: 840px;
+            ul li img{
+                width: 250px;
+                height: 250px;
+            }
+        }
     }
 
 
@@ -679,6 +713,45 @@
                 input{
                     width: 100%;
                 }
+            }
+        }
+
+        .coaching {
+            h3{
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            > ul {
+                padding: 0;
+
+                > li{
+                    text-align: center;
+
+                    img{
+                        float: none;
+                        margin-right: 0;
+                    }
+
+                    li, p{
+                        text-align: left;
+                        width: 100%;
+                    }
+                }
+            }
+
+            form{
+                width: 90%;
+            }
+        }
+
+        .coaching-testemonials ul {
+            width: 90%;
+
+            li img{
+                width: 200px;
+                height: 200px;
             }
         }
     }

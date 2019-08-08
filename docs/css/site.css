@@ -483,7 +483,26 @@ blockquote .author:before {
           .site .site-contacts form input {
             width: 100%; }
         .site .site-contacts .gym-info ul li i {
-          font-size: 1.1em; } }
+          font-size: 1.1em; }
+      .site .coaching h3 {
+        width: 400px; }
+      .site .coaching > ul > li {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+        .site .coaching > ul > li img {
+          float: left;
+          margin-bottom: var(--spacing-layout-elements); }
+        .site .coaching > ul > li li {
+          width: 100%; }
+      .site .coaching form {
+        width: 70%; }
+      .site .coaching-testemonials {
+        height: 840px; }
+        .site .coaching-testemonials ul li img {
+          width: 250px;
+          height: 250px; } }
   @media (max-width: 425px) {
     .site {
       display: grid;
@@ -532,7 +551,28 @@ blockquote .author:before {
       .site .site-contacts form {
         grid-template-columns: auto; }
         .site .site-contacts form input {
-          width: 100%; } }
+          width: 100%; }
+      .site .coaching h3 {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto; }
+      .site .coaching > ul {
+        padding: 0; }
+        .site .coaching > ul > li {
+          text-align: center; }
+          .site .coaching > ul > li img {
+            float: none;
+            margin-right: 0; }
+          .site .coaching > ul > li li, .site .coaching > ul > li p {
+            text-align: left;
+            width: 100%; }
+      .site .coaching form {
+        width: 90%; }
+      .site .coaching-testemonials ul {
+        width: 90%; }
+        .site .coaching-testemonials ul li img {
+          width: 200px;
+          height: 200px; } }
 
 .site-header {
   background: var(--color-header-bgrd);
@@ -986,18 +1026,26 @@ blockquote .author:before {
   background: #222629;
   color: #fff;
   padding: 2em;
-  margin-bottom: var(--spacing-layout-elements); }
+  margin-bottom: var(--spacing-layout-elements);
+  height: 785px;
+  position: relative; }
   .coaching-testemonials h2 {
     text-align: center; }
   .coaching-testemonials ul {
     text-align: center;
     width: 70%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0; }
     .coaching-testemonials ul li {
       list-style-type: none;
       display: none; }
       .coaching-testemonials ul li img {
         margin-bottom: calc(var(--spacing-layout-elements) / 2); }
+  .coaching-testemonials > div {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0; }
   .coaching-testemonials .dot {
     cursor: pointer;
     height: 15px;
