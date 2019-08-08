@@ -386,7 +386,9 @@ blockquote .author:before {
         padding: 0; }
         .site .trainers ul li img {
           width: 350px;
-          height: 350px; } }
+          height: 350px; }
+      .site .coaching-testemonials {
+        height: 810px; } }
   @media (max-width: 768px) {
     .site {
       display: grid;
@@ -502,7 +504,13 @@ blockquote .author:before {
         height: 840px; }
         .site .coaching-testemonials ul li img {
           width: 250px;
-          height: 250px; } }
+          height: 250px; }
+      .site .testemonials .testemonial {
+        text-align: center;
+        width: 80%; }
+        .site .testemonials .testemonial img {
+          float: none;
+          margin: 0; } }
   @media (max-width: 425px) {
     .site {
       display: grid;
@@ -572,7 +580,9 @@ blockquote .author:before {
         width: 90%; }
         .site .coaching-testemonials ul li img {
           width: 200px;
-          height: 200px; } }
+          height: 200px; }
+      .site .testemonials .testemonial img {
+        width: 250px; } }
 
 .site-header {
   background: var(--color-header-bgrd);

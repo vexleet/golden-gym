@@ -412,6 +412,10 @@
                 height: 350px;
             }
         }
+
+        .coaching-testemonials{
+            height: 810px;
+        }
     }
 
     @include bp (tablet){
@@ -624,6 +628,16 @@
                 height: 250px;
             }
         }
+
+        .testemonials .testemonial{
+            text-align: center;
+            width: 80%;
+
+            img{
+                float: none;
+                margin: 0;
+            }
+        }
     }
 
 
@@ -753,6 +767,10 @@
                 width: 200px;
                 height: 200px;
             }
+        }
+
+        .testemonials .testemonial img{
+            width: 250px;            
         }
     }
 }
