@@ -403,6 +403,15 @@
         .hamburger-nav{
             display: block;
         }
+
+        .trainers ul{
+            padding: 0;
+            
+            li img{
+                width: 350px;
+                height: 350px;
+            }
+        }
     }
 
     @include bp (tablet){
@@ -537,6 +546,28 @@
         .main-training{
             padding: 3em 9em;
         }
+
+        .trainers ul li{
+            flex-direction: column;
+            text-align: center;
+
+            &:nth-child(2){
+                flex-direction: column-reverse;
+            }
+
+
+            img{
+                width: 300px;
+                height: 300px;
+
+                &:nth-child(odd),
+                &:nth-child(even){
+                    margin: 0 auto;
+                    margin-bottom: var(--spacing-layout-elements);
+                }
+
+            }
+        }
     }
 
 
@@ -575,20 +606,12 @@
 
         .site-nav ul li a{
             border-radius: 0;
-            padding: 1.5em;
+            padding: 0.5em 0;
         }
 
-        .site-nav ul li{
-            background: #0C0D11;
-            color: #66FCF1;
-        }
 
         .site-header .site-title{
             margin-right: auto;
-        }
-
-        .site-nav{
-            display: none;
         }
 
         .main-training{
@@ -620,6 +643,11 @@
                 width: 90%;
                 margin-bottom: var(--spacing-layout-elements);
             }
+        }
+
+        .trainers ul li img{
+            width: 250px;
+            height: 250px;
         }
     }
 }
