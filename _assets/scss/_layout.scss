@@ -416,6 +416,10 @@
         .coaching-testemonials{
             height: 810px;
         }
+
+        .products ul{
+            grid-template-columns: repeat(2, 250px);
+        }
     }
 
     @include bp (tablet){
@@ -771,6 +775,11 @@
 
         .testemonials .testemonial img{
             width: 250px;            
+        }
+
+        .products ul{
+            grid-template-columns: 300px;
+            grid-gap: 3em;
         }
     }
 }
