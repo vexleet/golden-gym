@@ -67,3 +67,10 @@
         color: #474A4F;
     }
 }
+
+
+@-moz-document {
+    .trainers ul li img {
+        width: 70%;
+    }
+}
